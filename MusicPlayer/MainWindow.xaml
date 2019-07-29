@@ -13,7 +13,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="HarmPlayer" Height="520" Width="300" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="HarmPlayer" Height="550" Width="400" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary>
             <Style x:Key="scrollThumbs" TargetType="{x:Type Thumb}">
@@ -21,18 +21,18 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Thumb}">
                             <Grid x:Name="Grid">
-                            
-                            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Fill="Transparent"/>
+
+                                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Fill="Transparent"/>
                                 <Border x:Name="Rectangle1" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="{TemplateBinding Background}"/>
                             </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Tag"  Value="Horizontal">
                                     <Setter TargetName="Rectangle1" Property="Width" Value="Auto"/>
                                     <Setter TargetName="Rectangle1" Property="Height" Value="7"/>
-                                    
+
                                 </Trigger>
                             </ControlTemplate.Triggers>
-                             </ControlTemplate>
+                        </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
@@ -50,7 +50,7 @@
                                 <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="True" Focusable="False">
                                     <Track.Thumb>
                                         <Thumb x:Name="Thumb"  Background="{TemplateBinding Foreground}" Style="{DynamicResource scrollThumbs}"/>
-                                        
+
                                     </Track.Thumb>
                                     <Track.IncreaseRepeatButton>
                                         <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="False" />
@@ -60,14 +60,14 @@
                                     </Track.DecreaseRepeatButton>
 
                                 </Track>
-                                
+
                             </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
                                     <Setter Value="{DynamicResource ButtonSelectBrush}" TargetName="Thumb" Property="Background"/>
                                 </Trigger>
                                 <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
-                                <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
+                                    <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
                                 </Trigger>
                                 <Trigger Property="IsEnabled" Value="false">
                                     <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed"/>
@@ -96,7 +96,7 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Background="Black"   >
+    <Grid Name="BackAll" Background="Black"   >
         <Grid VerticalAlignment="Top" Margin="10"    >
 
             <StackPanel>
@@ -178,7 +178,7 @@
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse Height="135" Width="135">
-               
+
             </Ellipse>
             <Ellipse Name="MainImage" Width="135" Height="135 "/>
 
@@ -237,7 +237,7 @@
                         </materialDesign:PackIcon.Foreground>
                     </materialDesign:PackIcon>
                 </Button>
-                <Button Name="PauseButton"  HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="#70702222" Background="#B2222222" Click="Button_Click_1" Margin="144,10,86,10">
+                <Button Name="PauseButton"  HorizontalAlignment="Center" VerticalAlignment="Top"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="#70702222" Background="#B2222222" Click="Button_Click_1" Margin="194,10,136,0">
                     <Button.Effect>
                         <DropShadowEffect BlurRadius="20" Color="#FFD67619" Direction="-0" RenderingBias="Quality" ShadowDepth="1" />
                     </Button.Effect>
@@ -271,7 +271,7 @@
                 </Button>
             </Grid>
         </Grid>
-        
+
         <TextBlock Name="TimeText" Text="00:00" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="107,312,83,188" Height="20" Width="110" FontFamily="MS Gothic" FontWeight="Bold">
             <TextBlock.Foreground>
                 <SolidColorBrush  Color="#FFD6511E"/>
@@ -292,12 +292,12 @@
                     </Ellipse>
                     <TextBlock Name="TextBL" Text="Eminem - RapGod" VerticalAlignment="Center" Margin="7,0"  Width="100" TextTrimming="CharacterEllipsis"/>
 
-                    <TextBlock Text="3:45" VerticalAlignment="Center" Margin="7"   />
+                    <TextBlock Name="du" Text="3:45" VerticalAlignment="Center" Margin="7"   />
                 </StackPanel>
 
-            
+
             </ListViewItem>
-            
+
 
 
 
