@@ -1,0 +1,87 @@
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.pdb
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignColors.dll
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csprojResolveAssemblyReference.cache
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.g.cs
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\App.g.cs
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.cache
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.lref
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\App.baml
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.baml
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.Properties.Resources.resources
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.GenerateResource.Cache
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.manifest
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.application
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe.manifest
+C:\Users\ANONYMOUS\Documents\Visual Studio 2015\Projects\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.application
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.manifest
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.application
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.pdb
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignColors.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csprojResolveAssemblyReference.cache
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.g.cs
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\App.g.cs
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.cache
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.lref
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\App.baml
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.baml
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.Properties.Resources.resources
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.GenerateResource.Cache
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe.manifest
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.application
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\info.g.cs
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\obj\Debug\info.baml
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Id3.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Id3Lib.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Mp3Lib.dll
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Id3.pdb
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Id3Lib.pdb
+C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\bin\Debug\Mp3Lib.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.config
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe.manifest
+F:\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.application
+F:\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.exe
+F:\MusicPlayer\MusicPlayer\bin\Debug\MusicPlayer.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\Id3.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\Id3Lib.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignColors.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\Mp3Lib.dll
+F:\MusicPlayer\MusicPlayer\bin\Debug\Id3.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\Id3Lib.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\MusicPlayer\MusicPlayer\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\MusicPlayer\MusicPlayer\bin\Debug\Mp3Lib.pdb
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csprojResolveAssemblyReference.cache
+F:\MusicPlayer\MusicPlayer\obj\Debug\info.g.cs
+F:\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.g.cs
+F:\MusicPlayer\MusicPlayer\obj\Debug\App.g.cs
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.cache
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.lref
+F:\MusicPlayer\MusicPlayer\obj\Debug\App.baml
+F:\MusicPlayer\MusicPlayer\obj\Debug\info.baml
+F:\MusicPlayer\MusicPlayer\obj\Debug\MainWindow.baml
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.g.resources
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.Properties.Resources.resources
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.GenerateResource.Cache
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe.manifest
+F:\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.application

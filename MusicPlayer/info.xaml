@@ -1,0 +1,111 @@
+﻿<Window x:Class="MusicPlayer.info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicPlayer"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="info" Height="200" Width="350" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF343434"  IsHitTestVisible="True">
+        <Grid Height="100" Cursor="SizeAll" VerticalAlignment="Center">
+
+            <Ellipse Width="81" HorizontalAlignment="Left" Margin="0,10" MouseLeftButtonDown="Ellipse_MouseLeftButtonDown">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="anonymous-256.ico" />
+                </Ellipse.Fill>
+
+
+            </Ellipse>
+
+            <TextBlock  Foreground="#FFD6511E" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="81,34,4.2,41" Width="260" FontStyle="Italic" TextDecorations="{x:Null}" FontFamily="Sitka Subheading" Text=" Coded By HarmonymousTeam" FontSize="18" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5" Cursor="Arrow" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform Y="1E-06"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
+
+        </Grid>
+        <Grid Height="50" VerticalAlignment="Top"  >
+            <Button Name="Exit" Width="20" Height="20" Margin="10,5" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top" Click="Exit_Click" HorizontalAlignment="Right"  >
+                <materialDesign:PackIcon Kind="Power" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <materialDesign:PackIcon.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                            <GradientStop Color="#FFD69016"/>
+                            <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                            <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                        </LinearGradientBrush>
+                    </materialDesign:PackIcon.Foreground>
+                </materialDesign:PackIcon>
+            </Button>
+        </Grid>
+        <Grid VerticalAlignment="Bottom" Height="50">
+            <Button Name="Instagram" Width="Auto" Height="34" Margin="297,10,14.2,0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top"   Padding="0" Click="Instagram_Click"  >
+                <materialDesign:PackIcon Kind="Instagram" Width="37" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <materialDesign:PackIcon.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                            <GradientStop Color="#FFD69016"/>
+                            <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                            <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                        </LinearGradientBrush>
+                    </materialDesign:PackIcon.Foreground>
+                </materialDesign:PackIcon>
+            </Button>
+            <Button Name="Telegram" Width="Auto" Height="34" Margin="258,10,53.2,0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top"   Padding="0" Click="Telegram_Click"  >
+                <materialDesign:PackIcon Kind="Telegram"  Width="37" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <materialDesign:PackIcon.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                            <GradientStop Color="#FFD69016"/>
+                            <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                            <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                        </LinearGradientBrush>
+                    </materialDesign:PackIcon.Foreground>
+                </materialDesign:PackIcon>
+            </Button>
+            <Button Name="Github" Width="Auto" Height="34" Margin="219,10,92.2,0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top"   Padding="0" Click="Github_Click"  >
+                <materialDesign:PackIcon Kind="GithubBox"  Width="37" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <materialDesign:PackIcon.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                            <GradientStop Color="#FFD69016"/>
+                            <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                            <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                        </LinearGradientBrush>
+                    </materialDesign:PackIcon.Foreground>
+                </materialDesign:PackIcon>
+            </Button>
+            <TextBlock  Foreground="#FFD6511E" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,14,250.2,13" Width="85" FontStyle="Italic" TextDecorations="{x:Null}" FontFamily="Sitka Subheading" Text=" Follow us" FontSize="18" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" />
+            <Button Name="Laugh" Width="Auto" Height="30" Margin="95,10,218.2,0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}"  VerticalAlignment="Top"   Padding="0"  >
+                <materialDesign:PackIcon Kind="HandPointingRight " Width="37" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <materialDesign:PackIcon.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                            <GradientStop Color="#FFD69016"/>
+                            <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                            <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                        </LinearGradientBrush>
+                    </materialDesign:PackIcon.Foreground>
+                </materialDesign:PackIcon>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
