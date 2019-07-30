@@ -1,2 +1,2 @@
 ## HarmsPlayer
-![HarmsPlayer ](https://github.com/captainpick/HarmsPlayer/blob/master/Asset/MusicPlayer.jpg)
+![HarmsPlayer](https://github.com/captainpick/HarmsPlayer/blob/master/Asset/MusicPlayer.JPG)
