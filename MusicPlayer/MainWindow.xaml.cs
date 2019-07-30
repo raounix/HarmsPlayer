@@ -219,14 +219,14 @@ namespace MusicPlayer
             MediaPlayer P = new MediaPlayer();
            
             AddMusicPicture_List.Margin = new Thickness(20.0);
-            AddMusicPicture_List.Height = 30;
-            AddMusicPicture_List.Width = 30;
+            AddMusicPicture_List.Height = 40;
+            AddMusicPicture_List.Width = 40;
             AddMusicPicture_List.VerticalAlignment = VerticalAlignment.Center;
                         // Start IF ..................
             if (open.ShowDialog() == true)
             {
-                
 
+                MusicList.Items.Remove(AddList_Help_Text);
                 var v = SetCoverMusic();
                 AddMusicPicture_List.Fill = v;
                 MusicNumber.Text = AddMusicCounter.ToString();
@@ -253,8 +253,8 @@ namespace MusicPlayer
                 //MusicDuration.Text = Minute.ToString() + ":" + Second.ToString();
                 MusicDuration.VerticalAlignment = VerticalAlignment.Center;
                 MusicDuration.Margin = new Thickness(7);
-                
 
+                S.Height = 78;
                 S.Orientation = Orientation.Horizontal;
                 S.Children.Add(MusicNumber);
                 S.Children.Add(AddMusicPicture_List);

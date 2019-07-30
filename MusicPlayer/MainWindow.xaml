@@ -282,25 +282,10 @@
         </TextBlock>
 
         <ListView Name="MusicList" VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" SelectionChanged="MusicList_SelectionChanged"    >
-            <ListViewItem Name="MusicItemList" Selected="ListViewItem_Selected">
-                <StackPanel Name="MusicPanelList" Orientation="Horizontal" >
-                    <TextBlock Name="MusicNumberList"  Text="01" VerticalAlignment="Center"/>
-                    <Ellipse x:Name="MusicCoverList" Margin="20.0" Width="30" Height="30" VerticalAlignment="Center" >
-                        <Ellipse.Fill>
-                            <ImageBrush  ImageSource="Asset/eminem___rap_god_by_dragonlbs03-db6o3lv.jpg"/>
-                        </Ellipse.Fill>
-                    </Ellipse>
-                    <TextBlock Name="TextBL" Text="Eminem - RapGod" VerticalAlignment="Center" Margin="7,0"  Width="100" TextTrimming="CharacterEllipsis"/>
-
-                    <TextBlock Name="du" Text="3:45" VerticalAlignment="Center" Margin="7"   />
-                </StackPanel>
-
-
-            </ListViewItem>
 
 
 
-
+            <TextBlock Name="AddList_Help_Text" Text="Add music To PlayList" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="120,60"></TextBlock>
 
 
         </ListView>
