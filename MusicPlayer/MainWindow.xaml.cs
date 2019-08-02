@@ -23,7 +23,6 @@ namespace MusicPlayer
         DispatcherTimer timer = new DispatcherTimer();
         ImageBrush Main = new ImageBrush();
         string StrPathAddMusic;
-        Vector AddListVector = new Vector();
         bool MusicHasPause = false;
         string StopDirectory = System.IO.Directory.GetCurrentDirectory() + "\\Asset\\Music.png";
         bool RepeatOnce = true;
