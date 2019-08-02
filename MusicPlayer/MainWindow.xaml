@@ -281,8 +281,8 @@
 
         </TextBlock>
 
-        <ListView Name="MusicList" VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" IsEnabled="False"   >
-
+        <ListView Name="MusicList"  VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" IsEnabled="False" MouseUp="MusicList_MouseUp"     >
+            
 
 
             <TextBlock Name="AddList_Help_Text" Text="Add music To PlayList" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="120,60"></TextBlock>

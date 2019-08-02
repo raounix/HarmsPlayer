@@ -9,6 +9,7 @@ using System.Windows.Threading;
 using System.Drawing.Imaging;
 using System.Windows.Interop;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 namespace MusicPlayer
 
 {
@@ -22,12 +23,12 @@ namespace MusicPlayer
         DispatcherTimer timer = new DispatcherTimer();
         ImageBrush Main = new ImageBrush();
         string StrPathAddMusic;
-
-        bool MusicHasPause = true;
+        Vector AddListVector = new Vector();
+        bool MusicHasPause = false;
         string StopDirectory = System.IO.Directory.GetCurrentDirectory() + "\\Asset\\Music.png";
         bool RepeatOnce = true;
         int AddMusicCounter = 1;
-
+        List<string> AddMusic_List = new List<string>();
         public MainWindow()
         {
             
@@ -244,12 +245,13 @@ namespace MusicPlayer
                 StrPathAddMusic = System.IO.Path.GetFileNameWithoutExtension(open.FileName);
 
                 TextBl.Text = StrPathAddMusic;
+                
                 TextBl.VerticalAlignment = VerticalAlignment.Center;
                 TextBl.Margin = new Thickness(7, 7, 0, 0);
                 TextBl.Width = 100;
                 TextBl.TextTrimming = TextTrimming.CharacterEllipsis;
-
-
+                AddMusic_List.Add(open.FileName);
+                TextBl.Uid = MusicNumber.Text;
 
 
 
@@ -453,8 +455,60 @@ namespace MusicPlayer
             
         }
 
+        private void MusicList_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            
+            ListView V = (ListView)sender;
+
+            StackPanel St = (StackPanel)V.SelectedItem;
+            TextBlock Num = (TextBlock)St.Children[0];
+            int Number = Convert.ToInt16(Num.Text);
+            
+            
+            Media.Open(new Uri((AddMusic_List[Number-1])));
+            
+            try
+            {
+
+                Mp3Lib.Mp3File MP3 = new Mp3Lib.Mp3File(AddMusic_List[Number-1]);
+                System.Drawing.Image S = MP3.TagHandler.Picture;
+
+                var image = S;
+                var bitmap = new System.Drawing.Bitmap(image);
+                var bitmapSource = Imaging.CreateBitmapSourceFromHBitmap(bitmap.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                bitmap.Dispose();
+                var brush = new ImageBrush(bitmapSource);
+
+                MainImage.Fill = brush;
+            }
+
+            catch
+            {
+                string CurrentDirectory = System.IO.Directory.GetCurrentDirectory() + "\\Asset\\Music.png";
+                Main.ImageSource = new BitmapImage(new Uri(CurrentDirectory));
+                MainImage.Fill = Main;
+                //B.ImageSource = new BitmapImage(new Uri(@"C:\Program Files (x86)\Harmonymous\HarmsPlayer/Asset/Music.png"));
+                // MainImage.Fill = B;
+            }
+            if (Material.Kind == MaterialDesignThemes.Wpf.PackIconKind.Pause)
+            {
+                Material.Kind = MaterialDesignThemes.Wpf.PackIconKind.Play;
+            }
+            timer.Start();
+            PlayPause();
+
+
+        }
+
+
+
+
+
+
+
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+
 
     }
 }
