@@ -24,7 +24,7 @@
 
             </Ellipse>
 
-            <TextBlock  Foreground="#FFD6511E" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="81,34,4.2,41" Width="260" FontStyle="Italic" TextDecorations="{x:Null}" FontFamily="Sitka Subheading" Text=" Coded By HarmonymousTeam" FontSize="18" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5" Cursor="Arrow" >
+            <TextBlock  Foreground="#FFD6511E" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="81,34,4.2,41" Width="260" FontStyle="Italic" TextDecorations="{x:Null}" FontFamily="Sitka Subheading" Text="          Coded By CaptainPick" FontSize="18" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5" Cursor="Arrow" >
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="1" ScaleX="1"/>

@@ -281,7 +281,7 @@
 
         </TextBlock>
 
-        <ListView Name="MusicList" VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" SelectionChanged="MusicList_SelectionChanged"    >
+        <ListView Name="MusicList" VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" IsEnabled="False"   >
 
 
 

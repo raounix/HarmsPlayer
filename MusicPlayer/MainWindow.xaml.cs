@@ -197,6 +197,13 @@ namespace MusicPlayer
 
         private void AddList_Click(object sender, RoutedEventArgs e)
         {
+
+            AddList_Function();
+           
+        }
+
+        private void AddList_Function()
+        {
             //ListViewItem OBJ = new ListViewItem();
             //ImageBrush Br = new ImageBrush();
 
@@ -217,12 +224,12 @@ namespace MusicPlayer
             string Duration;
             int Minute, Second;
             MediaPlayer P = new MediaPlayer();
-           
+
             AddMusicPicture_List.Margin = new Thickness(20.0);
             AddMusicPicture_List.Height = 40;
             AddMusicPicture_List.Width = 40;
             AddMusicPicture_List.VerticalAlignment = VerticalAlignment.Center;
-                        // Start IF ..................
+            // Start IF ..................
             if (open.ShowDialog() == true)
             {
 
@@ -230,7 +237,7 @@ namespace MusicPlayer
                 var v = SetCoverMusic();
                 AddMusicPicture_List.Fill = v;
                 MusicNumber.Text = AddMusicCounter.ToString();
-               
+
                 MusicNumber.VerticalAlignment = VerticalAlignment.Center;
 
 
@@ -263,12 +270,10 @@ namespace MusicPlayer
                 MusicList.Items.Add(S);
 
                 AddMusicCounter = AddMusicCounter + 1;
+                MusicList.IsEnabled = true;
             }
-                    // END IF     ......................
-            
-           
+            // END IF     ......................
         }
-
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -339,10 +344,7 @@ namespace MusicPlayer
 
 
 
-        private void MusicList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
