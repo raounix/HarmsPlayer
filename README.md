@@ -6,5 +6,5 @@
 
 ### **Screenshot**
 <p align="center">
-<img src="https://github.com/captainpick/HarmsPlayer/blob/master/Asset/MusicPlayer.JPG" width="64px" height="64px"/>
+<img src="https://github.com/captainpick/HarmsPlayer/blob/master/Asset/MusicPlayer.JPG" width="256px" height="360px"/>
 </p>
