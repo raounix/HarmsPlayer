@@ -96,7 +96,7 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Name="BackAll" Background="Black"   >
+    <Grid Name="BackAll" Background="#0F3840"   >
         <Grid VerticalAlignment="Top" Margin="10"    >
 
             <StackPanel>
@@ -158,11 +158,11 @@
 
         </Grid>
         <Grid Margin="10"  Height="300" VerticalAlignment="Top" >
-            <Ellipse  Width="150" Height="150" StrokeThickness="1">
+            <Ellipse  Width="150" Height="150" StrokeThickness="2" >
                 <Ellipse.Stroke>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
                         <GradientStop Color="Black" Offset="0.71"/>
-                        <GradientStop Color="#FFB85219" />
+                        <GradientStop Color="#FFB85219"  />
                         <GradientStop Color="#FEB14F18" Offset="0.60" />
                     </LinearGradientBrush>
                 </Ellipse.Stroke>
