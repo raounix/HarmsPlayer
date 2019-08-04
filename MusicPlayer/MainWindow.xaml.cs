@@ -28,13 +28,15 @@ namespace MusicPlayer
         bool RepeatOnce = true;
         int AddMusicCounter = 1;
         List<string> AddMusic_List = new List<string>();
+        double Volume_Kepper = 0;
+        MaterialDesignThemes.Wpf.PackIconKind SoundIcon_Kepper;
         public MainWindow()
         {
             
             InitializeComponent();
-
+            Media.Volume = 0.5;
             StartApp();
-
+            
            
           
         }
@@ -185,7 +187,7 @@ namespace MusicPlayer
         {
             if (Media.Source != null)
             {
-
+                
                 TimeText.Text = String.Format("{0} / {1}", Media.Position.ToString(@"mm\:ss"), Media.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
             }
         }
@@ -498,6 +500,57 @@ namespace MusicPlayer
 
 
         }
+
+        private void SoundVolume_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double SoundVolumeValue = e.NewValue/100;
+            Media.Volume = SoundVolumeValue;
+            if (SoundVolumeValue < 0.5 && SoundVolumeValue>0)
+            {
+                MaterialSound.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeLow;
+            }
+           
+            else if (SoundVolumeValue >= 0.6)
+            {
+                MaterialSound.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeHigh;
+            }
+            
+            else if (SoundVolumeValue == 0)
+            {
+                MaterialSound.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeOff;
+            }
+           
+        }
+
+        private void SoundIcon_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (MaterialSound.Kind == MaterialDesignThemes.Wpf.PackIconKind.VolumeOff)
+            {
+                MaterialSound.Kind = SoundIcon_Kepper;
+                Media.Volume = Volume_Kepper;
+            }
+            else
+            {
+                Volume_Kepper = Media.Volume;
+                SoundIcon_Kepper = MaterialSound.Kind;
+                Media.Volume = 0;
+                MaterialSound.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeOff;
+            }
+        }
+
+
+        //private void MusicTime_ProgressBar(object sender, MouseButtonEventArgs e)
+        // {
+        //    MessageBox.Show(e.GetPosition(TimeProgress).X.ToString());
+        // }
+
+
+
+
+
+
+
 
 
 

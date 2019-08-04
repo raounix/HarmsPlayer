@@ -272,7 +272,7 @@
             </Grid>
         </Grid>
 
-        <TextBlock Name="TimeText" Text="00:00" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="107,312,83,188" Height="20" Width="110" FontFamily="MS Gothic" FontWeight="Bold">
+        <TextBlock Name="TimeText" Text="00:00" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="157,316,133,214" Height="20" Width="110" FontFamily="MS Gothic" FontWeight="Bold">
             <TextBlock.Foreground>
                 <SolidColorBrush  Color="#FFD6511E"/>
             </TextBlock.Foreground>
@@ -280,9 +280,8 @@
 
 
         </TextBlock>
+        <ListView  Name="MusicList"  VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" IsEnabled="False" MouseUp="MusicList_MouseUp"     >
 
-        <ListView Name="MusicList"  VerticalAlignment="Bottom" Margin="10,0,10,10" Height="170" Foreground="LightSteelBlue" IsEnabled="False" MouseUp="MusicList_MouseUp"     >
-            
 
 
             <TextBlock Name="AddList_Help_Text" Text="Add music To PlayList" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="120,60"></TextBlock>
@@ -295,6 +294,23 @@
             <materialDesign:PackIcon Kind="PlaylistPlus" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
                 <materialDesign:PackIcon.Foreground>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
+                        <GradientStop Color="#FFD69016"/>
+                        <GradientStop Color="#FFD6511E" Offset="0.747"/>
+                        <GradientStop Color="#FF98330D" Offset="0.807"/>
+
+
+                    </LinearGradientBrush>
+                </materialDesign:PackIcon.Foreground>
+            </materialDesign:PackIcon>
+        </Button>
+        <Slider HorizontalAlignment="Left" Margin="290,276,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100" Width="100" Foreground="#FFD67619" Style="{DynamicResource MaterialDesignDiscreteSlider }" ValueChanged="SoundVolume_Changed" Value="50"/>
+        <Button Name="SoundVolume" HorizontalAlignment="Left" Margin="267,311,0,0" VerticalAlignment="Top" Width="20" Height="20" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Background="{x:Null}"  Click="SoundIcon_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFD67619" Direction="-0" RenderingBias="Quality" ShadowDepth="1" />
+            </Button.Effect>
+            <materialDesign:PackIcon Name="MaterialSound" Kind="VolumeHigh"  Width="20" Height="20"  >
+                <materialDesign:PackIcon.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"   >
                         <GradientStop Color="#FFD69016"/>
                         <GradientStop Color="#FFD6511E" Offset="0.747"/>
                         <GradientStop Color="#FF98330D" Offset="0.807"/>
