@@ -173,7 +173,7 @@ namespace MusicPlayer
             Media.Close();
             timer.Stop();
             Material.Kind = MaterialDesignThemes.Wpf.PackIconKind.Play;
-            
+            SliderVolume.Value = 0;
          
                 
             
@@ -555,10 +555,7 @@ namespace MusicPlayer
 
         }
 
-        private void SliderVolume_DragLeave(object sender, DragEventArgs e)
-        {
-            MessageBox.Show("Ddsad");
-        }
+     
 
 
 
