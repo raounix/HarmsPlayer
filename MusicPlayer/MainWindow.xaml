@@ -96,11 +96,11 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid Name="BackAll" Background="#0F3840"   >
+    <Grid Name="BackAll" Background="#0F3840"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"  >
         <Grid VerticalAlignment="Top" Margin="10"    >
 
             <StackPanel>
-                <TextBlock Text="HarmsPlayer" HorizontalAlignment="Center"  Foreground="LightSteelBlue" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" />
+                <TextBlock Text="HarmsPlayer" HorizontalAlignment="Center"  Foreground="LightSteelBlue"  />
                 <TextBlock Text="CP" HorizontalAlignment="Center"  Foreground="LightSteelBlue" />
             </StackPanel>
             <Button Name="AddMusic" HorizontalAlignment="Left" Width="20" Height="20" Margin="25,5,0,0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" Click="AddMusic_Click"   >
@@ -198,7 +198,7 @@
                         </materialDesign:PackIcon.Foreground>
                     </materialDesign:PackIcon>
                 </Button>
-                <Button HorizontalAlignment="Left" Width="20" Height="20" Margin="50,5" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="Button_Click_2"   >
+                <Button HorizontalAlignment="Left" Width="20" Height="20" Margin="50,5" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center"    >
                     <materialDesign:PackIcon Kind="ChevronLeft" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <materialDesign:PackIcon.Foreground>
                             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox"  StartPoint="0.5,0" >
@@ -303,7 +303,7 @@
                 </materialDesign:PackIcon.Foreground>
             </materialDesign:PackIcon>
         </Button>
-        <Slider HorizontalAlignment="Left" Margin="290,276,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100" Width="100" Foreground="#FFD67619" Style="{DynamicResource MaterialDesignDiscreteSlider }" ValueChanged="SoundVolume_Changed" Value="50"/>
+        <Slider HorizontalAlignment="Left" Margin="290,276,0,0" VerticalAlignment="Top" Minimum="0" Maximum="100" Width="100" Foreground="#FFD67619" Style="{DynamicResource MaterialDesignDiscreteSlider }" ValueChanged="SoundVolume_Changed" Value="50" IsMoveToPointEnabled="True"/>
         <Button Name="SoundVolume" HorizontalAlignment="Left" Margin="267,311,0,0" VerticalAlignment="Top" Width="20" Height="20" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Background="{x:Null}"  Click="SoundIcon_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20" Color="#FFD67619" Direction="-0" RenderingBias="Quality" ShadowDepth="1" />
@@ -320,6 +320,7 @@
                 </materialDesign:PackIcon.Foreground>
             </materialDesign:PackIcon>
         </Button>
+        <Slider Name="SliderVolume" HorizontalAlignment="Left" Margin="76,341,0,0" VerticalAlignment="Top" Height="24" Width="250"  IsMoveToPointEnabled="True" MouseUp="SliderVolume_MouseUp"  />
     </Grid>
 
 

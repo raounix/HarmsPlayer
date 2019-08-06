@@ -10,6 +10,7 @@ using System.Drawing.Imaging;
 using System.Windows.Interop;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+
 namespace MusicPlayer
 
 {
@@ -18,7 +19,9 @@ namespace MusicPlayer
 
     public partial class MainWindow : Window
     {
-        private   MediaPlayer Media = new MediaPlayer();
+        
+
+        private MediaPlayer Media = new MediaPlayer();
         private  OpenFileDialog open = new OpenFileDialog();
         DispatcherTimer timer = new DispatcherTimer();
         ImageBrush Main = new ImageBrush();
@@ -27,9 +30,13 @@ namespace MusicPlayer
         string StopDirectory = System.IO.Directory.GetCurrentDirectory() + "\\Asset\\Music.png";
         bool RepeatOnce = true;
         int AddMusicCounter = 1;
+        // int Total_Second;
         List<string> AddMusic_List = new List<string>();
         double Volume_Kepper = 0;
         MaterialDesignThemes.Wpf.PackIconKind SoundIcon_Kepper;
+        //MediaPlayer P = new MediaPlayer();
+        //string Second, Minute;
+        
         public MainWindow()
         {
             
@@ -68,28 +75,7 @@ namespace MusicPlayer
 
 
 
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-        {
-            
-           // Media.Stop();
-          
-           // Material.Kind = MaterialDesignThemes.Wpf.PackIconKind.Pause;
-            
-
-
-           // Media.Open(new Uri(@"F:\Music\eminem_-_rap_god_ahangbaz.org_.mp3"));
-           // timer.Start();
-           // Media.Play();
-
-           //ImageBrush Br = new ImageBrush();
-           // Br.ImageSource = new BitmapImage(new Uri(@"C:\Users\ANONYMOUS\Desktop\MusicPlayer\MusicPlayer\Asset\eminem___rap_god_by_dragonlbs03-db6o3lv.jpg"));
-           // MainImage.Fill = Br;
-            
-            
-
-
-        }
-
+     
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,12 +106,7 @@ namespace MusicPlayer
 
 
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-
+    
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -135,23 +116,42 @@ namespace MusicPlayer
         {
             timer.Stop();
             open.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
-
+    
             MusicHasPause = false;
             if (open.ShowDialog() == true)
             {
+
                 Media.Stop();
+                SliderVolume.Value = 0;
                 Material.Kind = MaterialDesignThemes.Wpf.PackIconKind.Pause;
-                Media.Open(new Uri(open.FileName));
-                Media.Play();
-           
+                
+                
+                
                 timer.Start();
 
                var image= SetCoverMusic();
                 MainImage.Fill = image;
-            }
-            
+                Media.Open(new Uri(open.FileName, UriKind.Absolute));
+                Media.MediaOpened += Media_MediaOpened;
+                Media.Play();
+
+
             }
 
+        }
+
+        private void Media_MediaOpened(object sender, EventArgs e)
+        {
+            if (Media.NaturalDuration.HasTimeSpan)
+            {
+
+                SliderVolume.Maximum = Media.NaturalDuration.TimeSpan.TotalSeconds;
+
+            }
+
+        }
+
+        
 
 
 
@@ -162,9 +162,8 @@ namespace MusicPlayer
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
 
-            
 
-            
+
             Main.ImageSource = new BitmapImage(new Uri(@StopDirectory));
             MainImage.Fill = Main;
             timer.Start();
@@ -187,10 +186,19 @@ namespace MusicPlayer
         {
             if (Media.Source != null)
             {
-                
-                TimeText.Text = String.Format("{0} / {1}", Media.Position.ToString(@"mm\:ss"), Media.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+                try
+                {
+                    TimeText.Text = String.Format("{0} / {1}", Media.Position.ToString(@"mm\:ss"), Media.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+                    SliderVolume.Value += 1;
+                }
+                catch
+                {
+                    /// For Overtake Stupid Bug :)
+                }
             }
         }
+
+      
 
 
 
@@ -204,29 +212,19 @@ namespace MusicPlayer
            
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+        
         private void AddList_Function()
         {
-            //ListViewItem OBJ = new ListViewItem();
-            //ImageBrush Br = new ImageBrush();
-
-            //Br.ImageSource = new BitmapImage(new Uri(@"F:\Photo\Anonymous_Wallpaper\69034098-barcode-wallpapers.jpeg"));
-            //Ellipse E = new Ellipse();
-            //E.Width = 20;
-            //E.Height = 20;
-            //E.VerticalAlignment = VerticalAlignment.Center;
-            //E.Fill = Br;
-
-            //MusicList.Items.Add(OBJ);
+          
             Ellipse AddMusicPicture_List = new Ellipse();
             ImageBrush AddListBrush = new ImageBrush();
             TextBlock MusicNumber = new TextBlock();
             TextBlock TextBl = new TextBlock();
-            TextBlock MusicDuration = new TextBlock();
+           //  TextBlock MusicDuration = new TextBlock();
+            
             StackPanel S = new StackPanel();
-            string Duration;
-            int Minute, Second;
-            MediaPlayer P = new MediaPlayer();
-
+            
             AddMusicPicture_List.Margin = new Thickness(20.0);
             AddMusicPicture_List.Height = 40;
             AddMusicPicture_List.Width = 40;
@@ -244,7 +242,7 @@ namespace MusicPlayer
 
 
                 StrPathAddMusic = System.IO.Path.GetFileNameWithoutExtension(open.FileName);
-
+                
                 TextBl.Text = StrPathAddMusic;
                 
                 TextBl.VerticalAlignment = VerticalAlignment.Center;
@@ -254,22 +252,18 @@ namespace MusicPlayer
                 AddMusic_List.Add(open.FileName);
                 TextBl.Uid = MusicNumber.Text;
 
-
-
-
-                //Minute = int.Parse(Duration) / 60;
-                // Second = int.Parse(Duration) % 60;
-
-                //MusicDuration.Text = Minute.ToString() + ":" + Second.ToString();
-                MusicDuration.VerticalAlignment = VerticalAlignment.Center;
-                MusicDuration.Margin = new Thickness(7);
-
+             
+                //MusicDuration.VerticalAlignment = VerticalAlignment.Center;
+                //MusicDuration.Margin = new Thickness(7);
+                
+               // MusicDuration.Text = Minute + " : " + Second;
+                
                 S.Height = 78;
                 S.Orientation = Orientation.Horizontal;
                 S.Children.Add(MusicNumber);
                 S.Children.Add(AddMusicPicture_List);
                 S.Children.Add(TextBl);
-                //S.Children.Add(MusicDuration);
+               // S.Children.Add(MusicDuration);
                 MusicList.Items.Add(S);
 
                 AddMusicCounter = AddMusicCounter + 1;
@@ -277,6 +271,14 @@ namespace MusicPlayer
             }
             // END IF     ......................
         }
+
+   
+
+        /// //////////////////////////////////////////////////////////////////////////////////////
+        // private void P_MediaOpened(object sender, EventArgs e)
+        //{
+        // Total_Second= Convert.ToInt16( P.NaturalDuration.TimeSpan.TotalSeconds);
+        // }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -312,7 +314,7 @@ namespace MusicPlayer
         private void Media_MediaEnded(object sender, EventArgs e)
         {
             Media.Stop();
-            
+            SliderVolume.Value = 0;
             if (RepeatIcon.Kind==MaterialDesignThemes.Wpf.PackIconKind.RepeatOff)
             {
                 
@@ -419,7 +421,8 @@ namespace MusicPlayer
                 Media.Pause();
 
             }
-
+            Media.MediaOpened += Media_MediaOpened;
+            SliderVolume.Value = 0;
             Media.MediaEnded += Media_MediaEnded;
         }
 
@@ -538,6 +541,26 @@ namespace MusicPlayer
                 MaterialSound.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeOff;
             }
         }
+
+        //private void PlayerPosition_Slider(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+           
+       // }
+
+        private void SliderVolume_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            double S = SliderVolume.Value;
+
+            Media.Position = TimeSpan.FromSeconds(S);
+
+        }
+
+        private void SliderVolume_DragLeave(object sender, DragEventArgs e)
+        {
+            MessageBox.Show("Ddsad");
+        }
+
+
 
 
         //private void MusicTime_ProgressBar(object sender, MouseButtonEventArgs e)
